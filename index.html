@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" /> 
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=85a1be39-eeb8-4907-a966-dae0a8b25f61&lang=ru_RU" type="text/javascript"></script>
+    <script src="script/map.js" defer="defer"></script>
+    <script src="script/script.js" defer="defer"></script>
+    <title>Астрея</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__block">
+                <a href="/" class="header__logo">
+                    <picture>
+                        <source srcset="images/icon/logo.png" media="(max-width: 800px)">
+                        <source srcset="images/icon/logo-small.png" media="(max-width: 1024px)">
+                        <img src="images/icon/logo.png" class="header__img" alt="логотип компании">
+                    </picture>
+                </a>
+                <div class="header__info">
+                    <div class="header__visible">
+                        <div class="header__box header__box_1">
+                            <p class="header__text">г. Москва,<br class="header__text_br">ул. Марксистская, д. 3 </p>
+                        </div>
+                        <nav class="header__nav">
+                            <ul class="header__list">
+                                <li class="header__ref">
+                                    <a href="#" class="header__link">О Нас</a>
+                                </li>
+                                <li class="header__ref">
+                                    <a href="#" class="header__link">Услуги</a>
+                                </li>
+                                <li class="header__ref">
+                                    <a href="#" class="header__link">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header__box header__box_2">
+                            <a href="tel: +79778808527" class="header__text header__text_link">+7 (977) 880-85-27</a>
+                        </div>
+                        <div class="header__call js-popup-open">
+                            <button class="button__header">
+                                <p class="button__text">Позвонить</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__burger">
+                    <span class="header__burger_middle"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <section class="justice">
+            <div class="container">
+                <div class="justice__block">
+                    <div class="justice__right">
+                        <h1 class="justice__title"><span class="justice__title_gold">юридическая</span> помощь в москве</h1>
+                        <p class="justice__subtitle">Предлагаем простые решения сложных вопросов</p>
+                        <div class="justice__button">
+                            <button class="button js-popup-open">
+                                <p class="button__text">Записаться</p>
+                            </button>
+                        </div>
+                        <div class="justice__box">
+                            <div>
+                                <div class="justice__card">
+                                    <div class="justice__round">
+                                        <img src="images/icon/point-on-map.png" class="justice__images" alt="">
+                                    </div>
+                                    <p class="justice__text">Работаем по всей Москве и МО</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="justice__card">
+                                    <div class="justice__round">
+                                        <img src="images/icon/hand-money.png" class="justice__images" alt="">
+                                    </div>
+                                    <p class="justice__text">Бесплатные консультации</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="justice__card justice__card_margin">
+                                    <div class="justice__round">
+                                        <img src="images/icon/clipboard.png" class="justice__images" alt="">
+                                    </div>
+                                    <p class="justice__text">Все перевозки документов за наш счет</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about__ellipse"></div>
+            <div class="container">
+                <div class="about__block">
+                    <div class="about__left">
+                        <h2 class="about__title">О нас</h2>
+                        <p class="about__subtitle">Адвокаты компании «Астрея» обладают высоким уровнем юридической квалификации в разных правовых областях и гарантируют необходимую грамотную поддержку. Комплексный подход в разрешении дел разного уровня сложности. Штат юристов более 50 человек. Каждый член нашей команды - специалист в своей отрасли с большим стажем работы.</p>
+                        <div class="about__button">
+                            <button class="button js-popup-open">
+                                <p class="button__text">Записаться</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="case">
+            <div class="container">
+                <h2 class="case__title">Ведем дела любой сложности</h2>
+                <div class="case__block">
+                    <div class="case__card">
+                        <a href="#" class="case__link">
+                            <p class="case__heading">Семейные дела</p>
+                            <p class="case__text">Алименты, лишение родительских прав, опека, определить место жительства ребенка, оспаривание отцовства, раздел имущества, расторжение брака, расторжение брачного договора, установить порядок общения с ребенком, установление отцовства, усыновление ребенка и другое</p>
+                            <p class="case__price">от <b>10.000₽</b></p>
+                            <div class="case__arrow">
+                                <picture>
+                                    <source srcset="images/icon/arrow-small.svg" media="(max-width: 800px)">
+                                    <img src="images/icon/arrow.svg" alt="золотая стрелка вправо">
+                                </picture>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="case__card">
+                        <a href="#" class="case__link">
+                            <p class="case__heading">Уголовные дела</p>
+                            <p class="case__text">Взятки, вымогательство, грабеж, ДТП с тяжкими телесными, изнасилование, использование подложного документа, клевета, контрабанда, кража, мошенничество, налоговые преступления, наркотики, организация проституции, причинение вреда здоровью, разбой, растрата, убийство, угроза убийством и другое</p>
+                            <p class="case__price">от <b>40.000₽</b></p>
+                            <div class="case__arrow">
+                                <img src="images/icon/arrow.svg" alt="золотая стрелка вправо">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="case__card">
+                        <a href="#" class="case__link">
+                            <p class="case__heading">Гражданские дела</p>
+                            <p class="case__text">Выселение из квартиры, авторское право, административные дела, взыскание долгов, возмещение ущерба, вопросы по обороту оружия, залив вартиры, защита прав потребителей, интеллектуальная собственность, медицинские дела, миграционные вопросы, налоги, пожарная безопасность и другое</p>
+                            <p class="case__price">от <b>20.000₽</b></p>
+                            <div class="case__arrow">
+                                <img src="images/icon/arrow.svg" alt="золотая стрелка вправо">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="case__card">
+                        <a href="#" class="case__link">
+                            <p class="case__heading">Жилищные споры</p>
+                            <p class="case__text">Вопросы по строительству, выписать из квартиры, жилищные споры, земельные дела, ненадлежащий ремонт, неустойка по ДДУ, оспорить сделку купли-продажи недвижимости, споры о границах участка, споры по недвижимости, узаконить самострой, частный сервитут и другое</p>
+                            <p class="case__price">от <b>25.000₽</b></p>
+                            <div class="case__arrow">
+                                <img src="images/icon/arrow.svg" alt="золотая стрелка вправо">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="case__card">
+                        <a href="#" class="case__link">
+                            <p class="case__heading">Арбитраж</p>
+                            <p class="case__text">Арбитражные споры, взыскание неустойки, взыскание убытков, выделение стоимости доли, защита бизнеса при проверках, корпоративные споры, кредитные юристы, ликвидация ООО, обжалование действий госорганов, оспаривание кадастровой стоимости, оспаривание сделок, открыть ООО и другое</p>
+                            <p class="case__price">от <b>30.000₽</b></p>
+                            <div class="case__arrow">
+                                <img src="images/icon/arrow.svg" alt="золотая стрелка вправо">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="contacts__ellipse"></div>
+            <div class="container">
+                <div class="contacts__top">
+                    <div class="contacts__left">
+                        <h2 class="contacts__title">Контакты</h2>
+                        <p class="contacts__subtitle">Наши специалисты помогут вам решить любой вопрос. Просто позвоните нам или закажите обратный звонок.</p>
+                        <div class="contacts__button">
+                            <button class="button button__contacts js-popup-open">
+                                <p class="button__text">Заказать обратный звонок</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="contacts__right">
+                        <div id="map" class="contacts__map">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__bottom">
+                    <div class="contacts__card">
+                        <div class="contacts__description">
+                            <img src="images/icon/phone.svg" alt="иконка телефона">
+                            <p class="contacts__requisites">Телефон:</p>
+                        </div>
+                        <a href="tel: +79778808527" class="contacts__info">+7 (977) 880-85-27</a>
+                    </div>
+                    <div class="contacts__card">
+                        <div class="contacts__description">
+                            <img src="images/icon/address.svg" alt="иконка местоположения">
+                            <p class="contacts__requisites">Адрес:</p>
+                        </div>
+                        <p class="contacts__info">г. Москва,<br>ул. Марксистская, д. 3 </p>
+                    </div>
+                    <div class="contacts__card">
+                        <div class="contacts__description">
+                            <img src="images/icon/clock.svg" alt="иконка xfcjd">
+                            <p class="contacts__requisites">Режим работы:</p>
+                        </div>
+                        <p class="contacts__info">Ежедневно:<br>с 9:00 до 20:00</p>
+                    </div>
+                    <div class="contacts__card">
+                        <div class="contacts__description">
+                            <img src="images/icon/clipboard-list.svg" alt="иконка планшета с задачами">
+                            <p class="contacts__requisites">Реквизиты:</p>
+                        </div>
+                        <p class="contacts__info">ИНН 9706023020</p>
+                        <p class="contacts__info">ОГРН 1227700161281</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__block">
+                <p class="footer__text">© 2023. Все права защищены.</p>
+                <a href="#" class="footer__link">Политика конфиденциальности</a>
+                <a href="#" class="footer__link">Политика обработки данных</a>
+            </div>
+        </div>
+    </footer>
+    <div class="popup popup_application">
+        <div class="popup__card">
+            <a class="popup__cross js-popup-close" href="#">
+                <picture>
+                    <source srcset="images/icon/cross-small.svg" media="(max-width: 800px)">
+                    <img src="images/icon/cross.svg" alt="cross" class="popup__svg">
+                </picture>
+            </a>
+            <h2 class="popup__heading">Наш менеджер перезвонит вам в течение 15 минут</h2>
+            <form class="popup__form" id="form">
+                <input class="input input__popup" type="text" name="fio" id="labe-name" placeholder="Ваше имя">
+                <input class="input input__popup js-tel" type="tel" name="tel" id="label-phone" placeholder="+7 (___) ___-__-__">
+                <div class="popup__button">
+                    <button type="submit" class="button button__popup js-send">
+                        <p class="button__text">Отправить заявку</p>
+                    </button>
+                </div>
+            </form>
+            <p class="popup__text">Нажимая на кнопку вы соглашаетесь с <a href="#" class="popup__text_link">политикой обработки данных</a></p>
+        </div>
+    </div>
+    <div class="popup popup_good">
+        <div class="popup__card popup__card_good">
+            <a class="popup__cross js-popup-close-good" href="#">
+                <picture>
+                    <source srcset="images/icon/cross-small.svg" media="(max-width: 800px)">
+                    <img src="images/icon/cross.svg" alt="cross" class="popup__svg">
+                </picture>
+            </a>
+            <h2 class="popup__heading">Заявка отправлена</h2>
+            <p class="popup__answer">Наш менеджер перезвонит вам в течение 15 минут</p>
+            <div class="popup__button">
+                <button  class="button button__popup js-thanks">
+                    <p class="button__text">Спасибо</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="popup popup_bad">
+        <div class="popup__card">
+            <a class="popup__cross js-popup-close-bad" href="#">
+                <picture>
+                    <source srcset="images/icon/cross-small.svg" media="(max-width: 800px)">
+                    <img src="images/icon/cross.svg" alt="cross" class="popup__svg">
+                </picture>
+            </a>
+            <h2 class="popup__heading">Ошибка</h2>
+            <p class="popup__answer">Неверно введены данные, попробуйте еще</p>
+            <div class="popup__button">
+                <button  class="button button__popup js-more">
+                    <p class="button__text">Попробуй ещё</p>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

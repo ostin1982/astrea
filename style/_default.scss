@@ -1,0 +1,47 @@
+/*font*/
+$h1-font: 42px;
+$h2-font: 30px;
+$h1-1024-font: 29px;
+$p1-font: 26px;
+$p2-font: 24px;
+$p3-font: 22px;
+$p4-font: 20px;
+$p5-font: 18px;
+$p6-font: 16px;
+$p7-font: 14px;
+
+/*color*/
+$black-color: #1B1A1A;
+$dark-color: #0F0F0F;
+$dark-text-color: #262626;
+$dark-price-color: #090808;
+$popup-color: #272727;
+$placeholder-color: #000C19;
+$white-color: #FFFFFF;
+$light-grey-color: #EAEAEA;
+$grey-color: #7D7D7D;
+$grey-text-color: #706B61;
+$gold-color: #E5C16E;
+$dark-gold-color: #B48811;
+$light-gold-color: #E6C16E;
+$light-gold-hover-color: #FBD581;
+$light-gold-active-color: #FFDC8D;
+$pale-gold-color: #FFFBF2;
+$gold-for-the-frame-color: #DBC79A;
+$linear-gradient-color: linear-gradient(180deg, #262626 3.48%, #2D2C2C 119.39%, #131313 119.4%);
+$link-color: rgba(222, 222, 222, 0.35);
+
+/*animate*/
+@keyframes arrow {
+    0% {
+        text-align: left;
+    }
+
+    30% {
+        text-align: center;
+    }
+
+    100% {
+        text-align: right;
+    }
+}

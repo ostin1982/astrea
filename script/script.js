@@ -9,7 +9,10 @@ const closePopupGood = popupGood.querySelector('.js-popup-close-good');
 const closePopupThanks = popupGood.querySelector('.js-thanks')
 const popupBad = document.querySelector('.popup_bad');
 const closePopupBad = popupBad.querySelector('.js-popup-close-bad');
-const closePopupMore = popupBad.querySelector('.js-more')
+const closePopupMore = popupBad.querySelector('.js-more');
+const popupPolitics = document.querySelector('.popup_politics');
+const closePolitics = popupPolitics.querySelector('.js-popup-close-politics');
+const politics = document.querySelectorAll('.js-politics');
 const body = document.querySelector('body');
 //ширина скролла
 const scrollWidth = window.innerWidth - body.offsetWidth + 'px';
@@ -64,6 +67,11 @@ goodOrBad(send, popup, popupGood);
 popupClose(closePopupGood, popupGood);
 popupClose(closePopupThanks, popupGood);
 outsideWindow(popupGood);
+politics.forEach((politicsLink) => {
+    popupOpen(politicsLink, popupPolitics);
+});
+popupClose(closePolitics, popupPolitics);
+outsideWindow(popupPolitics);
 //goodOrBad(send, popup, popupBad);
 //popupClose(closePopupBad, popupBad);
 //popupClose(closePopupMore, popupBad);

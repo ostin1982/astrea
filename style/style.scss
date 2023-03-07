@@ -50,10 +50,6 @@ h1 {
         font-size: $p6-font;
         text-decoration: none;
         cursor: pointer;
-
-        &:hover {
-            color: $gold-color;
-        }
     }
 
     &__text {
@@ -65,6 +61,8 @@ h1 {
         margin: 0;
 
         &_header {
+            position: relative;
+            z-index: 2; 
             font-weight: 400;
         }
     }
@@ -219,7 +217,7 @@ h1 {
 
     &__title {
         position: relative;
-        text-transform: uppercase;
+        text-transform: upper;
         text-align: center;
         z-index: 1;
 
@@ -338,7 +336,7 @@ h1 {
         font-size: $h2-font;
         line-height: 39px;
         text-align: left;
-        text-transform: uppercase;
+        text-transform: upper;
         color: $light-grey-color;
         margin: 0;
     }
@@ -628,6 +626,11 @@ h1 {
         height: auto;
         background: $popup-color;
         border-radius: 2px;
+
+        &_politics {
+            width: calc(100% - 58px);
+            height: calc(100% - 58px);
+        }
     }
 
     &__cross {
@@ -636,6 +639,16 @@ h1 {
         right: 13px;
         width: 24px;
         height: 24px;
+
+        &_politics {
+            top: 26px;
+            right: 26px;
+        }
+    }
+
+    &__block {
+        overflow-y: scroll;
+        padding-right: 6px;
     }
 
     &__heading {
@@ -686,6 +699,22 @@ h1 {
         text-align: center;
         color: $light-grey-color;
         width: 418px;
+    }
+
+    &__title {
+        font-size: $p2-font;
+        line-height: 31px;
+        color: $light-grey-color;
+        margin: 0;
+        padding: 4px 0;
+    }
+
+    &__subtitle {
+        font-size: $p6-font;
+        line-height: 140%;
+        color: $light-grey-color;
+        margin: 0;
+        padding-bottom: 4px;
     }
 }
 
@@ -804,9 +833,11 @@ h1 {
     
         &__link {
             padding: 32px 9px;
+            height: 160px;
 
             &::before {
-                height: 198px;
+                height: 224px;
+                max-height: 100%;
             }
         }
     
@@ -1197,9 +1228,10 @@ h1 {
             padding: 26px 10px 34px 10px;
             flex-direction: column;
             align-items: flex-start;
+            height: 200px;
 
             &::before {
-                height: 260px;
+                height: 270px;
             }  
         }
     
@@ -1344,12 +1376,22 @@ h1 {
             line-height: 19px;
             width: 100%;
         }
+
+        &__title {
+            font-size: $p6-font;
+            line-height: 19px;
+        }
+    
+        &__subtitle {
+            font-size: $p7-font;
+        }
     }
 }
 
 @media (max-width: 632px) {
     .case {
         &__link {
+            height: 220px;
             &::before {
                 height: 283px;
             }  
@@ -1357,19 +1399,10 @@ h1 {
     }
 }
 
-@media (max-width: 546px) {
+@media (max-width: 510px) {
     .case {
         &__link {
-            &::before {
-                height: 305px;
-            }  
-        }
-    }
-}
-
-@media (max-width: 460px) {
-    .case {
-        &__link {
+            height: 260px;
             &::before {
                 height: 328px;
             }  
@@ -1377,11 +1410,12 @@ h1 {
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 400px) {
     .case {
         &__link {
+            height: 300px;
             &::before {
-                height: 350px;
+                height: 380px;
             }  
         }
     }
@@ -1413,18 +1447,9 @@ h1 {
 @media (max-width: 362px) {
     .case {
         &__link {
+            height: 440px;
             &::before {
-                height: 372px;
-            }  
-        }
-    }
-}
-
-@media (max-width: 349px) {
-    .case {
-        &__link {
-            &::before {
-                height: 393px;
+                height: 500px;
             }  
         }
     }
@@ -1445,16 +1470,6 @@ h1 {
             &::before {
                 top: 412px;
             }
-        }
-    }
-}
-
-@media (max-width: 322px) {
-    .case {
-        &__link {
-            &::before {
-                height: 417px;
-            }  
         }
     }
 }

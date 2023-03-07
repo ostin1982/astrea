@@ -61,9 +61,6 @@ h1 {
   text-decoration: none;
   cursor: pointer;
 }
-.button__header:hover {
-  color: #E5C16E;
-}
 .button__text {
   position: relative;
   z-index: 2;
@@ -73,6 +70,8 @@ h1 {
   margin: 0;
 }
 .button__text_header {
+  position: relative;
+  z-index: 2;
   font-weight: 400;
 }
 .button__contacts {
@@ -208,7 +207,7 @@ h1 {
 }
 .justice__title {
   position: relative;
-  text-transform: uppercase;
+  text-transform: upper;
   text-align: center;
   z-index: 1;
 }
@@ -311,7 +310,7 @@ h1 {
   font-size: 30px;
   line-height: 39px;
   text-align: left;
-  text-transform: uppercase;
+  text-transform: upper;
   color: #EAEAEA;
   margin: 0;
 }
@@ -568,12 +567,24 @@ h1 {
   background: #272727;
   border-radius: 2px;
 }
+.popup__card_politics {
+  width: calc(100% - 58px);
+  height: calc(100% - 58px);
+}
 .popup__cross {
   position: absolute;
   top: 13px;
   right: 13px;
   width: 24px;
   height: 24px;
+}
+.popup__cross_politics {
+  top: 26px;
+  right: 26px;
+}
+.popup__block {
+  overflow-y: scroll;
+  padding-right: 6px;
 }
 .popup__heading {
   font-weight: 700;
@@ -617,6 +628,20 @@ h1 {
   text-align: center;
   color: #EAEAEA;
   width: 418px;
+}
+.popup__title {
+  font-size: 24px;
+  line-height: 31px;
+  color: #EAEAEA;
+  margin: 0;
+  padding: 4px 0;
+}
+.popup__subtitle {
+  font-size: 16px;
+  line-height: 140%;
+  color: #EAEAEA;
+  margin: 0;
+  padding-bottom: 4px;
 }
 
 @media (max-width: 1200px) {
@@ -707,9 +732,11 @@ h1 {
   }
   .case__link {
     padding: 32px 9px;
+    height: 160px;
   }
   .case__link::before {
-    height: 198px;
+    height: 224px;
+    max-height: 100%;
   }
   .case__heading {
     font-size: 22px;
@@ -1021,9 +1048,10 @@ h1 {
     padding: 26px 10px 34px 10px;
     flex-direction: column;
     align-items: flex-start;
+    height: 200px;
   }
   .case__link::before {
-    height: 260px;
+    height: 270px;
   }
   .case__heading {
     font-size: 18px;
@@ -1137,25 +1165,36 @@ h1 {
     line-height: 19px;
     width: 100%;
   }
+  .popup__title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .popup__subtitle {
+    font-size: 14px;
+  }
 }
 @media (max-width: 632px) {
+  .case__link {
+    height: 220px;
+  }
   .case__link::before {
     height: 283px;
   }
 }
-@media (max-width: 546px) {
-  .case__link::before {
-    height: 305px;
+@media (max-width: 510px) {
+  .case__link {
+    height: 260px;
   }
-}
-@media (max-width: 460px) {
   .case__link::before {
     height: 328px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 400px) {
+  .case__link {
+    height: 300px;
+  }
   .case__link::before {
-    height: 350px;
+    height: 380px;
   }
 }
 @media (max-width: 384px) {
@@ -1177,13 +1216,11 @@ h1 {
   }
 }
 @media (max-width: 362px) {
-  .case__link::before {
-    height: 372px;
+  .case__link {
+    height: 440px;
   }
-}
-@media (max-width: 349px) {
   .case__link::before {
-    height: 393px;
+    height: 500px;
   }
 }
 @media (max-width: 330px) {
@@ -1198,10 +1235,5 @@ h1 {
   }
   .about__left::before {
     top: 412px;
-  }
-}
-@media (max-width: 322px) {
-  .case__link::before {
-    height: 417px;
   }
 }/*# sourceMappingURL=style.css.map */

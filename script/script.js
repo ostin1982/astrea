@@ -72,11 +72,14 @@ outsideWindow(popupGood);
 // Открытие бургер
 const burger = document.querySelector('.header__burger');
 const menu = document.querySelector('.header__info');
+const headerClick = document.querySelectorAll('.js-header-click');
 
 let menuOpen = false;
 
 if(burger) {
-    burger.addEventListener('click',() => {
+    burger.addEventListener('click',(event) => {
+        event.preventDefault();
+
         if(!menuOpen) {
             burger.classList.add('header__burger_close');
             menu.classList.add('header__info_active');
@@ -89,7 +92,19 @@ if(burger) {
             menuOpen = false;
         }
     });
-}
+
+    for (let index = 0; index < headerClick.length; index++) {
+        const headerClicks = headerClick[index];
+
+        headerClicks.addEventListener('click', () => {
+
+                burger.classList.remove('header__burger_close');
+                menu.classList.remove('header__info_active');
+                body.classList.remove('body_lock');
+                menuOpen = false;
+            })
+        }
+    }
 
 // Маска для телефона
 const tel = document.querySelectorAll('.js-tel');

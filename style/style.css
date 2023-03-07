@@ -12,6 +12,10 @@
     text-align: right;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 16px;
   font-style: normal;
@@ -67,6 +71,9 @@ h1 {
   font-size: 16px;
   line-height: 19px;
   margin: 0;
+}
+.button__text_header {
+  font-weight: 400;
 }
 .button__contacts {
   padding: 19px 57px;
@@ -345,14 +352,29 @@ h1 {
   border-bottom: 1px solid #DBC79A;
 }
 .case__link {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
   padding: 24px 15px;
 }
-.case__link:hover {
+.case__link::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 158px;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transform: scaleX(0);
+}
+.case__link:hover::before {
+  opacity: 1;
   background: #FFFBF2;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.8s;
 }
 .case__link:hover .case__price {
   display: none;
@@ -362,18 +384,21 @@ h1 {
   animation: arrow 0.8s linear infinite;
 }
 .case__heading {
+  position: relative;
   font-family: "PT Serif", serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 26px;
-  line-height: 34px;
+  font-size: 24px;
+  line-height: 31px;
   text-transform: uppercase;
   color: #262626;
   max-width: 265px;
   width: 100%;
   margin: 0;
+  z-index: 1;
 }
 .case__text {
+  position: relative;
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
@@ -381,8 +406,10 @@ h1 {
   max-width: 549px;
   width: 100%;
   margin: 0;
+  z-index: 1;
 }
 .case__price {
+  position: relative;
   font-size: 16px;
   line-height: 140%;
   text-align: right;
@@ -390,12 +417,15 @@ h1 {
   margin: 0;
   max-width: 100px;
   width: 100%;
+  z-index: 1;
 }
 .case__arrow {
+  position: relative;
   display: none;
   max-width: 100px;
   width: 100%;
   text-align: left;
+  z-index: 1;
 }
 
 .contacts {
@@ -678,15 +708,8 @@ h1 {
   .case__link {
     padding: 32px 9px;
   }
-  .case__link:hover {
-    background: #FFFBF2;
-  }
-  .case__link:hover .case__price {
-    display: none;
-  }
-  .case__link:hover .case__arrow {
-    display: block;
-    animation: arrow 0.8s linear infinite;
+  .case__link::before {
+    height: 198px;
   }
   .case__heading {
     font-size: 22px;
@@ -738,6 +761,16 @@ h1 {
     padding: 9px 16px;
   }
 }
+@media (max-width: 892px) {
+  .case__link::before {
+    height: 220px;
+  }
+}
+@media (max-width: 822px) {
+  .case__link::before {
+    height: 242px;
+  }
+}
 @media (max-width: 800px) {
   h1 {
     font-size: 24px;
@@ -754,10 +787,16 @@ h1 {
     padding: 14px 0;
     color: #262626;
   }
+  .button::before {
+    height: 47px;
+  }
   .input {
     width: calc(100% - 32px);
     margin-bottom: 13px;
     padding: 14px 13px;
+  }
+  .header__img {
+    padding-left: 24px;
   }
   .header__logo {
     width: 100vw;
@@ -825,7 +864,7 @@ h1 {
     z-index: 2;
   }
   .header__burger_middle, .header__burger_middle:before, .header__burger_middle:after {
-    background: #fff;
+    background: #EAEAEA;
     display: block;
     height: 2px;
     opacity: 1;
@@ -983,6 +1022,9 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
   }
+  .case__link::before {
+    height: 260px;
+  }
   .case__heading {
     font-size: 18px;
     line-height: 23px;
@@ -1096,6 +1138,26 @@ h1 {
     width: 100%;
   }
 }
+@media (max-width: 632px) {
+  .case__link::before {
+    height: 283px;
+  }
+}
+@media (max-width: 546px) {
+  .case__link::before {
+    height: 305px;
+  }
+}
+@media (max-width: 460px) {
+  .case__link::before {
+    height: 328px;
+  }
+}
+@media (max-width: 390px) {
+  .case__link::before {
+    height: 350px;
+  }
+}
 @media (max-width: 384px) {
   .about {
     padding: 28px 16px 0 16px;
@@ -1112,5 +1174,34 @@ h1 {
   }
   .about__left::before {
     top: 390px;
+  }
+}
+@media (max-width: 362px) {
+  .case__link::before {
+    height: 372px;
+  }
+}
+@media (max-width: 349px) {
+  .case__link::before {
+    height: 393px;
+  }
+}
+@media (max-width: 330px) {
+  .about {
+    padding: 28px 16px 0 16px;
+    height: 880px;
+  }
+  .about:before {
+    background: url("../images/icon/ellips-top-large.png") no-repeat;
+    width: 800px;
+    height: 890px;
+  }
+  .about__left::before {
+    top: 412px;
+  }
+}
+@media (max-width: 322px) {
+  .case__link::before {
+    height: 417px;
   }
 }/*# sourceMappingURL=style.css.map */

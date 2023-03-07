@@ -28,9 +28,9 @@
             <div class="header__block">
                 <a href="/" class="header__logo">
                     <picture>
-                        <source srcset="images/icon/logo.png" media="(max-width: 800px)">
-                        <source srcset="images/icon/logo-small.png" media="(max-width: 1024px)">
-                        <img src="images/icon/logo.png" class="header__img" alt="логотип компании">
+                        <source srcset="images/icon/logo.svg" media="(max-width: 800px)">
+                        <source srcset="images/icon/logo-small.svg" media="(max-width: 1024px)">
+                        <img src="images/icon/logo.svg" class="header__img" alt="логотип компании">
                     </picture>
                 </a>
                 <div class="header__info">
@@ -41,13 +41,13 @@
                         <nav class="header__nav">
                             <ul class="header__list">
                                 <li class="header__ref">
-                                    <a href="#" class="header__link">О Нас</a>
+                                    <a href="#about" class="header__link js-header-click">О нас</a>
                                 </li>
                                 <li class="header__ref">
-                                    <a href="#" class="header__link">Услуги</a>
+                                    <a href="#case" class="header__link js-header-click">Услуги</a>
                                 </li>
                                 <li class="header__ref">
-                                    <a href="#" class="header__link">Контакты</a>
+                                    <a href="#contacts" class="header__link js-header-click">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
@@ -56,7 +56,7 @@
                         </div>
                         <div class="header__call js-popup-open">
                             <button class="button__header">
-                                <p class="button__text">Позвонить</p>
+                                <p class="button__text button__text_header">Позвонить</p>
                             </button>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="about__ellipse"></div>
             <div class="container">
                 <div class="about__block">
@@ -125,7 +125,7 @@
                 </div>
             </div>
         </section>
-        <section class="case">
+        <section class="case" id="case">
             <div class="container">
                 <h2 class="case__title">Ведем дела любой сложности</h2>
                 <div class="case__block">
@@ -185,7 +185,7 @@
                 </div>
             </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <div class="contacts__ellipse"></div>
             <div class="container">
                 <div class="contacts__top">

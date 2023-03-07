@@ -1,5 +1,9 @@
 @import 'default';
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: $p6-font;
     font-style: normal;
@@ -59,6 +63,10 @@ h1 {
         font-size: $p6-font;
         line-height: 19px;
         margin: 0;
+
+        &_header {
+            font-weight: 400;
+        }
     }
 
     &__contacts {
@@ -377,14 +385,32 @@ h1 {
     }
 
     &__link {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
         text-decoration: none;
         padding: 24px 15px;
 
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 158px;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            transform: scaleX(0);
+        }
+    
         &:hover {
-            background: $pale-gold-color;
+            &::before {
+                opacity: 1;
+                background: $pale-gold-color;
+                transform: scaleX(1);
+                transform-origin: left;
+                transition: transform 0.8s;
+            }
 
             & .case__price {
                 display: none;
@@ -398,19 +424,22 @@ h1 {
     }
 
     &__heading {
+        position: relative;
         font-family: 'PT Serif', serif;
         font-style: normal;
         font-weight: 400;
-        font-size: $p1-font;
-        line-height: 34px;
+        font-size: $p2-font;
+        line-height: 31px;
         text-transform: uppercase;
         color: $dark-text-color;
         max-width: 265px;
         width: 100%;
         margin: 0;
+        z-index: 1;
     }
 
     &__text {
+        position: relative;
         font-weight: 400;
         font-size: $p6-font;
         line-height: 140%;
@@ -418,9 +447,11 @@ h1 {
         max-width: 549px;
         width: 100%;
         margin: 0;
+        z-index: 1;
     }
 
     &__price {
+        position: relative;
         font-size: $p6-font;
         line-height: 140%;
         text-align: right;
@@ -428,13 +459,16 @@ h1 {
         margin: 0;
         max-width: 100px;
         width: 100%;
+        z-index: 1;
     }
 
     &__arrow {
+        position: relative;
         display: none;
         max-width: 100px;
         width: 100%;
         text-align: left;
+        z-index: 1;
     }
 }
 
@@ -770,18 +804,9 @@ h1 {
     
         &__link {
             padding: 32px 9px;
-    
-            &:hover {
-                background: $pale-gold-color;
-    
-                & .case__price {
-                    display: none;
-                }
-    
-                & .case__arrow {
-                    display: block;
-                    animation: arrow 0.8s linear infinite;
-                }
+
+            &::before {
+                height: 198px;
             }
         }
     
@@ -849,6 +874,26 @@ h1 {
     }
 }
 
+@media (max-width: 892px) {
+    .case {
+        &__link {
+            &::before {
+                height: 220px;
+            }  
+        }
+    }
+}
+
+@media (max-width: 822px) {
+    .case {
+        &__link {
+            &::before {
+                height: 242px;
+            }  
+        }
+    }
+}
+
 @media (max-width: 800px) {
     h1 {
         font-size: $p2-font;
@@ -866,6 +911,11 @@ h1 {
             padding: 14px 0;
             color: $dark-text-color;
         }
+
+        
+        &::before {
+            height: 47px;
+        }
     }
 
     .input {
@@ -875,6 +925,10 @@ h1 {
     }
 
     .header {
+        &__img {
+            padding-left: 24px;
+        }
+        
         &__logo {
             width: 100vw;
             text-align: center;
@@ -957,7 +1011,7 @@ h1 {
         &__burger_middle,
         &__burger_middle:before,
         &__burger_middle:after {
-            background: #fff;
+            background: $light-grey-color;
             display: block;
             height: 2px;
             opacity: 1;
@@ -1143,6 +1197,10 @@ h1 {
             padding: 26px 10px 34px 10px;
             flex-direction: column;
             align-items: flex-start;
+
+            &::before {
+                height: 260px;
+            }  
         }
     
         &__heading {
@@ -1289,6 +1347,46 @@ h1 {
     }
 }
 
+@media (max-width: 632px) {
+    .case {
+        &__link {
+            &::before {
+                height: 283px;
+            }  
+        }
+    }
+}
+
+@media (max-width: 546px) {
+    .case {
+        &__link {
+            &::before {
+                height: 305px;
+            }  
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .case {
+        &__link {
+            &::before {
+                height: 328px;
+            }  
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .case {
+        &__link {
+            &::before {
+                height: 350px;
+            }  
+        }
+    }
+}
+
 @media (max-width: 384px) {
     .about {
         padding: 28px 16px 0 16px;
@@ -1308,6 +1406,55 @@ h1 {
             &::before {
                 top: 390px;
             }
+        }
+    }
+}
+
+@media (max-width: 362px) {
+    .case {
+        &__link {
+            &::before {
+                height: 372px;
+            }  
+        }
+    }
+}
+
+@media (max-width: 349px) {
+    .case {
+        &__link {
+            &::before {
+                height: 393px;
+            }  
+        }
+    }
+}
+
+@media (max-width: 330px) {
+    .about {
+        padding: 28px 16px 0 16px;
+        height: 880px;
+
+        &:before {
+            background: url('../images/icon/ellips-top-large.png') no-repeat; 
+            width: 800px;
+            height: 890px;
+        }
+
+        &__left {
+            &::before {
+                top: 412px;
+            }
+        }
+    }
+}
+
+@media (max-width: 322px) {
+    .case {
+        &__link {
+            &::before {
+                height: 417px;
+            }  
         }
     }
 }
